@@ -7,7 +7,11 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.js?$/, loader: 'babel', exclude: /node_modules/ },
+      { test: /\.js?$/, loader: 'babel', exclude: /node_modules/,
+      query:{
+        presets:['react','stage-1'],
+        plugins:['transform-class-properties','transform-decorators-legacy'],
+      }},
       { test: /\.s?css$/, loader: 'style!css!sass' },
     ]
   },
