@@ -7,11 +7,13 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.js?$/, loader: 'babel', exclude: /node_modules/,
-      query:{
-        presets:['react','stage-1'],
-        plugins:['transform-class-properties','transform-decorators-legacy'],
-      }},
+      {
+        test: /\.js?$/, loader: 'babel', exclude: /node_modules/,
+        query: {
+          presets: ['react', 'stage-1'],
+          plugins: ['transform-class-properties', 'transform-decorators-legacy'],
+        }
+      },
       { test: /\.s?css$/, loader: 'style!css!sass' },
     ]
   },
@@ -30,6 +32,11 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+   new webpack.DefinePlugin({
+    "process.env": {
+      "NODE_ENV": JSON.stringify("development")
+    }
+  })
   ]
 };
