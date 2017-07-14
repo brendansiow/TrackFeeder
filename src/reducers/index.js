@@ -1,6 +1,8 @@
-import {combineReducers } from "redux"
-import feeder from "./feederReducer"
+import { combineReducers } from "redux"
+import feederReducer from "./feederReducer"
 
-export default combineReducers({
-    feeder,
+
+const rootReducer = combineReducers({
+    feeders:feederReducer
 })
+export default rootReducer;

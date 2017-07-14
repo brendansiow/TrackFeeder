@@ -1,28 +1,10 @@
-export default function reducer(state={
-    fetching:false,
-    fetched:false,
-    feeders:[],
-    error:null,
-}, action) {
+const initialState ={ feeders:[] };
+
+export default function(state = initialState,action){
     switch(action.type){
-        case "FETCH_FEEDERS_PENDING": {
-            return{...state, 
-                fetching: true}
-            break;
-        }
-        case "FETCH_FEEDERS_REJECTED": {
-            return{...state, 
-                fetching: false,
-                error:action.feeder}
-            break;
-        }
-        case "FETCH_FEEDERS_FULFILLED": {
-            return{...state, 
-                fetching: false, 
-                fetched:true, 
-                feeders:action.feeder}
-            break;
-        }         
+        case'FETCH_FEEDERS_FULFILLED':
+        return {...state, feeders : action.payload.data}; //...state indicate new state push
+        default:
+          return state;
     }
-    return state
 }
