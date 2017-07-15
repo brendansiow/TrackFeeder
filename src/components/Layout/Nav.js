@@ -13,7 +13,7 @@ export default class Nav extends React.Component {
 		this.setState({ collapsed });
 	}
     render(){
-        const feedersClass = location.pathname.match(/^\/feeders/) ? "active" : "";
+        const feedersClass = location.pathname.match(/^\/feeders/)|| location.pathname.match(/^\/feeder/)? "active" : "";
         const matchesClass = location.pathname.match(/^\/matches/) ? "active" : "";
         const creditsClass = location.pathname.match(/^\/credits/) ? "active" : "";
         return(
