@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 var Halogen = require('halogen')
 
-class FeederLoading extends Component {
+class SyncLoading extends Component {
     render() {
         var color = '#2C3E50';
         var style = {
@@ -26,9 +26,9 @@ class FeederLoading extends Component {
         };
         return (
             <div>
-                <div style={style}><Halogen.SyncLoader color={color}/></div>
+                <div className="col-lg-12" style={style}><Halogen.SyncLoader color={color}/></div>
             </div>
         );
     }
 }
-export default FeederLoading;
+export default SyncLoading;

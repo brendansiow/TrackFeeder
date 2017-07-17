@@ -1,3 +1,6 @@
+body{
+      font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 *.unselectable {
     -webkit-touch-callout: none;
    -moz-user-select: -moz-none;
@@ -16,7 +19,7 @@
 {
     margin-top: 20px;
     display:inline-block;
-    font-size: 25px; 
+    font-size: 20px; 
 }
 .container-hover {
   position: relative;
@@ -25,9 +28,10 @@
 }
 .image-hover {
   display: block;
-  border-radius:50%;
-  width: 100%;
+  border-radius:35%;
+  width: 82%;
   height: auto;
+  margin:auto;
 }
 .overlay-hover {
   position: absolute;
@@ -37,6 +41,7 @@
   right: 0;
   height: 100%;
   width: 100%;
+  margin:auto;
   opacity: 0;
   transition: .5s ease;
   background-color: #18bc9c;
@@ -47,8 +52,8 @@
 }
 
 .imageimage-hover {
-  width: 40%;
-  height: 85%;
+  width: 30%;
+  height: 75%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -60,7 +65,7 @@ position: relative;
 padding-bottom: 56.25%;
 padding-top: 60px; overflow: hidden;
 }
-.responsive-video iframe,
+.responsive-video video,
 .responsive-video object,
 .responsive-video embed {
 position: absolute;
