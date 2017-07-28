@@ -13,11 +13,11 @@ export default class Credits extends React.Component {
                 <div style={{ textAlign: "center" }}>
                     <h3 style={{ marginTop: "0px" }}>CREDITS to REVELUV.joy ♥</h3>
                     <hr style={{ borderTop: "solid 5px", maxWidth: "400px", borderColor: "#2C3E50" }} />
-                </div>
-                <div style={{margin:"auto auto",width:"60%"}}>
-                    <video className="video-js" preload="auto" data-setup="{}">
-                        <source src="https://1fhjm3c.oloadcdn.net/dl/l/P5GfLF9mRKv_Ast1/zlZlO61cRPI/Red+Velvet+%EB%A0%88%EB%93%9C%EB%B2%A8%EB%B2%B3_%EB%B9%A8%EA%B0%84+%EB%A7%9B+%28Red+Flavor%29_Music+Video.mp4" type="video/mp4" />
-                    </video>
+
+                    <div className="row">
+                        <iframe class="col-lg-12 col-md-12 col-sm-12" style={{ width: "800px", height: "470px", padding: "20px 20px 20px 20px", backgroundColor: "#2C3E50", borderStyle: "solid", borderColor: "#2C3E50", marginBottom: "20px" }} src="https://www.youtube.com/embed/WyiIGEHQP8o">
+                        </iframe>
+                    </div>
                 </div>
                 <div className="col-lg-12" style={{ textAlign: "center" }}>
                     <h3 style={{ marginTop: "0px" }}>RED SUMMER ♥</h3>
