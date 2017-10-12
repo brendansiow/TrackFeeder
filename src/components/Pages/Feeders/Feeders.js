@@ -1,10 +1,10 @@
 import React, { Component } from "react"
-import { browserHistory } from 'react-router'
+import { browserHistory } from 'react-router-dom'
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 import { fetchFeeder } from "../../../actions/feederActions"
 import FeederItem from "./FeederItem"
-import SyncLoading from '../../SyncLoading'
+var Spinner = require('react-spinkit');
 
 class Feeders extends React.Component {
     constructor(props) {
@@ -58,7 +58,9 @@ class Feeders extends React.Component {
                     </form>
                 </div>
                 {this.state.feeders.length < 1 &&
-                    <SyncLoading />
+                    <div style={{ textAlign: "center", width: "0%", margin: "auto"}}>
+                    <Spinner name="pacman" color="#2c3e50"/>
+                    </div>
                 }
                 <div className="row" style={{ padding: "0px 70px 20px 70px" }}>
                     <div className="col-lg-12 col-md-12 col-sm-12">
